@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Quiz : MonoBehaviour
 {
-    
     [SerializeField] List<QuestionSO> questions;
     [SerializeField] TextMeshProUGUI questionText;
+    [SerializeField] TextMeshProUGUI scoreText;
 
     [SerializeField] GameObject[] answerButtons;
 
@@ -17,10 +17,13 @@ public class Quiz : MonoBehaviour
     Timer timer;
     bool gotAnswered;
     QuestionSO question;
+    Score score;
 
     void Start()
     {
         timer = GetComponent<Timer>();
+
+        score = GetComponent<Score>();
 
         StartQuestion();
     }
@@ -40,6 +43,7 @@ public class Quiz : MonoBehaviour
         {
             GetRandomQuestion();
             DisplayQuestion();      
+            score.AddQuestionVisited();
         }
         else
         {
@@ -79,6 +83,8 @@ public class Quiz : MonoBehaviour
         if (index == question.CorrectAnswerIndex)
         {
             questionText.text = "¡Correcto!";
+
+            score.AddCorrectAnswer();
         }
         else
         {
@@ -124,10 +130,19 @@ public class Quiz : MonoBehaviour
         {
             StartQuestion();
         }   
+
+        ShowScore();
     }
 
     void ShowCorrectAnswer()
     {
         answerButtons[question.CorrectAnswerIndex].GetComponentInChildren<Image>().sprite = correctAnswerSprite;
     }
+
+    void ShowScore()
+    {
+        //scoreText.text = "Puntuación: " + Mathf.RoundToInt(score.CorrectAnswers/(float)score.QuestionsVisited * 100.0f) + "%";
+        scoreText.text = "Puntuación: " + score.CorrectAnswers + "/" + score.QuestionsVisited;
+    }
+
 }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,7 @@ public class Quiz : MonoBehaviour
 
     [SerializeField] Sprite defaultAnswerSprite;
     [SerializeField] Sprite correctAnswerSprite;
+    [SerializeField] GameManager gameManager;
 
     Timer timer;
     bool gotAnswered;
@@ -57,7 +59,8 @@ public class Quiz : MonoBehaviour
         }
         else
         {
-            questionText.text = "¡No hay más preguntas!";
+            ///questionText.text = "¡No hay más preguntas!";
+            gameManager.GameOver();
         }  
     }
     

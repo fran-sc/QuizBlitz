@@ -8,6 +8,7 @@ public class Quiz : MonoBehaviour
     [SerializeField] List<QuestionSO> questions;
     [SerializeField] TextMeshProUGUI questionText;
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] Slider progressBar;
 
     [SerializeField] GameObject[] answerButtons;
 
@@ -25,7 +26,15 @@ public class Quiz : MonoBehaviour
 
         score = GetComponent<Score>();
 
+        InitalizeProgressBar();
+
         StartQuestion();
+    }
+
+    void InitalizeProgressBar()
+    {
+        progressBar.maxValue = questions.Count;
+        progressBar.value = 0;
     }
 
     void StartQuestion()
@@ -44,6 +53,7 @@ public class Quiz : MonoBehaviour
             GetRandomQuestion();
             DisplayQuestion();      
             score.AddQuestionVisited();
+            progressBar.value = score.QuestionsVisited;
         }
         else
         {

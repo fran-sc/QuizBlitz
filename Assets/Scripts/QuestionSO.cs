@@ -18,4 +18,11 @@ public class QuestionSO : ScriptableObject
     int correctAnswerIndex = 0;
     public int CorrectAnswerIndex => correctAnswerIndex;
 
+    public void SetData(string question, string[] answers, int correctAnswerIndex)
+    {
+        this.question = question;
+        this.answers = answers;
+        this.correctAnswerIndex = correctAnswerIndex;
+    }
+
 }

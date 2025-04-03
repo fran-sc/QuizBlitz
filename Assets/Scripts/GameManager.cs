@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,15 +8,22 @@ public class GameManager : MonoBehaviour
     [SerializeField] Canvas quizCanvas;
     [SerializeField] Canvas gameOverCanvas;
 
+    QuestionLoader questionLoader;
+
     void Awake()
     {
-        StartGame();   
+        questionLoader = GetComponent<QuestionLoader>();
     }
 
-    void StartGame()
+    void Start()
     {
         quizCanvas.gameObject.SetActive(true);
         gameOverCanvas.gameObject.SetActive(false);
+    }
+
+    public List<QuestionSO> GetQuestions()
+    {
+        return questionLoader.LoadedQuestions;
     }
 
     public void GameOver()

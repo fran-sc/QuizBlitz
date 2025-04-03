@@ -446,6 +446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 87464039}
   - component: {fileID: 87464038}
+  - component: {fileID: 87464040}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -482,6 +483,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &87464040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87464037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e0eb5984bebd0c491b80b59df7cf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jsonFileName: questions.json
 --- !u!1 &348468793
 GameObject:
   m_ObjectHideFlags: 0
@@ -3223,12 +3237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e570f28a561a99bd699feeb0ef8bf554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questions:
-  - {fileID: 11400000, guid: 923f35aa750bbb3c2b27f0827f453185, type: 2}
-  - {fileID: 11400000, guid: 0b2106e501c32ff0eb49e2f782d257cd, type: 2}
-  - {fileID: 11400000, guid: b3123cfb6837b082c84cd8eb8976a129, type: 2}
-  - {fileID: 11400000, guid: 8cf7d15857e3b6d8888ea3eb4c488437, type: 2}
-  - {fileID: 11400000, guid: 386c1cdc72216f3989612dc091b5f923, type: 2}
   questionText: {fileID: 348468795}
   scoreText: {fileID: 778630390}
   progressBar: {fileID: 1245302894}

@@ -1,12 +1,11 @@
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Quiz : MonoBehaviour
 {
-    [SerializeField] List<QuestionSO> questions;
+    //[SerializeField] List<QuestionSO> questions;
     [SerializeField] TextMeshProUGUI questionText;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] Slider progressBar;
@@ -22,8 +21,13 @@ public class Quiz : MonoBehaviour
     QuestionSO question;
     Score score;
 
+    List<QuestionSO> questions;
+
     void Start()
     {
+        questions = gameManager.GetQuestions();
+        Debug.Log("Preguntas cargadas: " + questions.Count);
+
         timer = GetComponent<Timer>();
 
         score = GetComponent<Score>();

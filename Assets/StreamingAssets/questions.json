@@ -1,0 +1,54 @@
+{
+    "questions": [
+      {
+        "question": "¿Quién fue el primer ser humano en viajar al espacio?",
+        "answers": ["Neil Armstrong", "Yuri Gagarin", "Buzz Aldrin", "John Glenn"],
+        "correctAnswerIndex": 1
+      },
+      {
+        "question": "¿En qué año llegó el ser humano a la Luna?",
+        "answers": ["1965", "1969", "1972", "1959"],
+        "correctAnswerIndex": 1
+      },
+      {
+        "question": "¿Cuál fue el primer satélite artificial lanzado al espacio?",
+        "answers": ["Sputnik 1", "Explorer 1", "Vostok 1", "Luna 2"],
+        "correctAnswerIndex": 0
+      },
+      {
+        "question": "¿Qué misión llevó a los primeros humanos a la Luna?",
+        "answers": ["Apolo 11", "Gemini 4", "Vostok 6", "Mercury-Redstone 3"],
+        "correctAnswerIndex": 0
+      },
+      {
+        "question": "¿Cuál fue el primer rover en explorar Marte?",
+        "answers": ["Sojourner", "Opportunity", "Curiosity", "Spirit"],
+        "correctAnswerIndex": 0
+      },
+      {
+        "question": "¿Cuál es el telescopio espacial más famoso lanzado en 1990?",
+        "answers": ["Hubble", "James Webb", "Kepler", "Chandra"],
+        "correctAnswerIndex": 0
+      },
+      {
+        "question": "¿Qué país fue el primero en lanzar un astronauta al espacio?",
+        "answers": ["Estados Unidos", "Rusia", "China", "Alemania"],
+        "correctAnswerIndex": 1
+      },
+      {
+        "question": "¿Cuál fue la primera sonda en sobrevolar Júpiter?",
+        "answers": ["Voyager 1", "Galileo", "Pioneer 10", "Cassini"],
+        "correctAnswerIndex": 2
+      },
+      {
+        "question": "¿Cómo se llama el rover de la NASA que aterrizó en Marte en 2021?",
+        "answers": ["Curiosity", "Spirit", "Perseverance", "Opportunity"],
+        "correctAnswerIndex": 2
+      },
+      {
+        "question": "¿Cuál es la única nave espacial que ha salido del sistema solar?",
+        "answers": ["Pioneer 10", "Voyager 1", "New Horizons", "Galileo"],
+        "correctAnswerIndex": 1
+      }
+    ]
+}

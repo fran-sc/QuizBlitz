@@ -4,7 +4,7 @@
 
 #### Project: QuizBlitz
 
-`[Unity ver.: 6.0.38f1]`
+`[Unity ver.: 6.3.9f1]`
 
 
 <center>

@@ -1,10 +1,3 @@
----
-title: QuizBlitz - Project [Code Rev]
-weight: 7
-author: Fran Montoiro
-draft: false
----
-
 #### 💻 Fragmentos de código relevantes
 
 Este documento revisa con más detalle fragmentos de código clave del proyecto QuizBlitz.
